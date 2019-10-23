@@ -6,12 +6,19 @@
         "framework",
         "laravel"
     ],
+    "repositories": [
+    {
+        "type": "path",
+        "url": "./nova"
+    }
+],
     "license": "MIT",
     "require": {
         "php": "^7.2",
         "fideloper/proxy": "^4.0",
         "laravel/framework": "^6.0",
-        "laravel/tinker": "^1.0"
+        "laravel/tinker": "^1.0",
+        "laravel/nova": "*"
     },
     "require-dev": {
         "facade/ignition": "^1.4",
