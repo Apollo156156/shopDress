@@ -15,9 +15,10 @@ class CreateProduktsTable extends Migration
     {
         Schema::create('produkts', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->string('title');
-            $table->integer('price')->default(0);
-            $table->text('description')->default(0);
+            $table->string('title'); //название
+            $table->string('type')->default(0); //мужская или женская
+            $table->integer('price')->default(0); //стоимость
+            $table->string('img')->nullable();
             $table->timestamps();
         });
     }

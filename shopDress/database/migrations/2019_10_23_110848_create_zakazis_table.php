@@ -15,9 +15,10 @@ class CreateZakazisTable extends Migration
     {
         Schema::create('zakazis', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->string('title');
-            $table->string('person');
+            $table->string('idPerson');
+            $table->string('idProdukt');//
             $table->string('status');
+            $table->integer('amount');
             $table->integer('price');
             $table->timestamps();
         });

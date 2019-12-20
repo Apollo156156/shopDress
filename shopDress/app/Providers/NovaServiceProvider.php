@@ -41,8 +41,9 @@ class NovaServiceProvider extends NovaApplicationServiceProvider
      */
     protected function gate()
     {
+
         Gate::define('viewNova', function ($user) {
-            return true;
+            return $user->IsAdmin == 0 ? true : false;
         });
     }
 
@@ -87,4 +88,14 @@ class NovaServiceProvider extends NovaApplicationServiceProvider
     {
         //
     }
+
+    protected function authorization()
+    {
+        $this->gate();
+
+        Nova::auth(function ($request) {
+            return $request->user()->IsAdmin == 1 ? true : false;
+        });
+    }
+
 }
