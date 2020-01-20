@@ -1,0 +1,4 @@
+appolonova.yana@mail.ru
+panda1
+пароль от нова
+composer config http-basic.nova.laravel.com ${appolonova.yana@mail.ru} ${panda1}
